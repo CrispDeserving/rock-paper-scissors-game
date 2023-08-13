@@ -72,3 +72,12 @@ function gameResults(playerSelection, computerSelection) {
             return playerDidNotPickMessage;
     }
 }
+
+function game() {
+    const GAMES = 5;
+    for (let i=0; i<GAMES; i++) {
+        let playerInput = prompt("Rock, papers, scissors, shoot!");
+
+        console.log(gameResults(playerInput, getComputerChoice()));
+    }
+}
