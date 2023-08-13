@@ -1,6 +1,6 @@
 const ROCK = "Rock".toLowerCase();
 const PAPER = "Paper".toLowerCase();
-const SCISSORS = "SCISSORS".toLowerCase();
+const SCISSORS = "Scissors".toLowerCase();
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
