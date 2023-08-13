@@ -27,7 +27,7 @@ function gameResults(playerSelection, computerSelection) {
     let loweredComputerInput = computerSelection.toLowerCase();
     let genericDrawMessage = (choice) => `Both the player and the computer is in a draw. Both picked ${choice}.`;
 
-    let genericDidNotPickMessage = " did not pick rock, paper, scissors.";
+    let genericDidNotPickMessage = " did not pick rock, paper, or scissors.";
     let playerDidNotPickMessage = "Player(is a loss)" + genericDidNotPickMessage;
     let computerDidNotPickMessage = "Computer(is a win)" + genericDidNotPickMessage;
 
