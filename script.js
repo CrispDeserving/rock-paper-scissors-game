@@ -25,7 +25,7 @@ function gameResults(playerSelection, computerSelection) {
 
     let loweredPlayerInput = playerSelection.toLowerCase(); 
     let loweredComputerInput = computerSelection.toLowerCase();
-    let genericDrawMessage = "Both the player and the computer is in a draw. Both picked ";
+    let genericDrawMessage = (choice) => `Both the player and the computer is in a draw. Both picked ${choice}.`;
 
     let genericDidNotPickMessage = " did not pick rock, paper, scissors.";
     let playerDidNotPickMessage = "Player" + genericDidNotPickMessage;
@@ -35,7 +35,7 @@ function gameResults(playerSelection, computerSelection) {
         case ROCK:
             switch(loweredComputerInput) {
                 case ROCK:
-                    return genericDrawMessage + ROCK; 
+                    return genericDrawMessage(ROCK); 
                 case PAPER:
                     return loseMessage + rockPaperMessage;
                 case SCISSORS:
@@ -49,7 +49,7 @@ function gameResults(playerSelection, computerSelection) {
                 case ROCK:
                     return winMessage + rockPaperMessage;
                 case PAPER:
-                    return genericDrawMessage + PAPER;
+                    return genericDrawMessage(PAPER);
                 case SCISSORS:
                     return loseMessage + paperScissorsMessage;
                 default:
@@ -63,7 +63,7 @@ function gameResults(playerSelection, computerSelection) {
                 case SCISSORS:
                     return loseMessage + scissorsRockMessage;
                 case PAPER:
-                    return genericDrawMessage + SCISSORS;
+                    return genericDrawMessage(SCISSORS);
                 default:
                     return computerDidNotPickMessage;    
             }
