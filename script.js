@@ -78,6 +78,9 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
+    console.log("A game of rock, paper, scissors has started.");
+    console.log("The user will play against a computer.");
+
     for (let i=0; i<GAMES; i++) {
         let playerInput = prompt("Rock, papers, scissors, shoot!");
         let result = gameResults(playerInput, getComputerChoice());
