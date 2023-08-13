@@ -28,8 +28,8 @@ function gameResults(playerSelection, computerSelection) {
     let genericDrawMessage = (choice) => `Both the player and the computer is in a draw. Both picked ${choice}.`;
 
     let genericDidNotPickMessage = " did not pick rock, paper, scissors.";
-    let playerDidNotPickMessage = "Player" + genericDidNotPickMessage;
-    let computerDidNotPickMessage = "Computer" + genericDidNotPickMessage;
+    let playerDidNotPickMessage = "Player(is a loss)" + genericDidNotPickMessage;
+    let computerDidNotPickMessage = "Computer(is a win)" + genericDidNotPickMessage;
 
     switch(loweredPlayerInput) {
         case ROCK:
@@ -75,9 +75,27 @@ function gameResults(playerSelection, computerSelection) {
 
 function game() {
     const GAMES = 5;
+    let playerScore = 0;
+    let computerScore = 0;
+
     for (let i=0; i<GAMES; i++) {
         let playerInput = prompt("Rock, papers, scissors, shoot!");
+        let result = gameResults(playerInput, getComputerChoice());
 
-        console.log(gameResults(playerInput, getComputerChoice()));
+        console.log(result);
+
+        if (result.indexOf("win") != -1) {
+            playerScore += 1;
+        } else if (result.indexOf("lose") != -1 || result.indexOf("loss") != -1) {
+            computerScore += 1;
+        }
+    }
+
+    if (playerScore > computerScore) {
+        console.log("Player wins the game!");
+    } else if (playerScore < computerScore) {
+        console.log("Computer wins the game!");
+    } else {
+        console.log("The player and the computer is in a tie!");
     }
 }
