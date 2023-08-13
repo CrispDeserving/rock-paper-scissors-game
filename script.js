@@ -13,7 +13,7 @@ function getComputerChoice() {
 
 function gameResults(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return "The player and the computer is in a draw. Both got" + playerSelection;
+        return "The player and the computer is in a draw. Both got " + playerSelection;
     }
 
     let winMessage = "You win! ";
@@ -30,6 +30,22 @@ function gameResults(playerSelection, computerSelection) {
                     return loseMessage + rockPaperMessage;
                 default:
                     return winMessage + scissorsRockMessage;
+            }
+
+        case "Paper":
+            switch(computerSelection) {
+                case "Rock":
+                    return winMessage + rockPaperMessage;
+                default:
+                    return loseMessage + paperScissorsMessage;
+            }
+
+        default:
+            switch(computerSelection) {
+                case "Rock":
+                    return loseMessage + scissorsRockMessage;
+                default:
+                    return winMessage + paperScissorsMessage;
             }
     }
 }
