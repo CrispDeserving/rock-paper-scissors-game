@@ -1,3 +1,7 @@
+const ROCK = "Rock".toLowerCase();
+const PAPER = "Paper".toLowerCase();
+const SCISSORS = "SCISSORS".toLowerCase();
+
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
 
@@ -20,35 +24,51 @@ function gameResults(playerSelection, computerSelection) {
     let scissorsRockMessage = "Rock beats Scissors!";
 
     let loweredPlayerInput = playerSelection.toLowerCase(); 
-    let loweredComputerInput = computerSelection.toLowerCase(); 
-    
-    if (loweredPlayerInput === loweredComputerInput) {
-        return "The player and the computer is in a draw. Both got " + playerSelection;
-    }    
+    let loweredComputerInput = computerSelection.toLowerCase();
+    let genericDrawMessage = "Both the player and the computer is in a draw. Both picked ";
+
+    let genericDidNotPickMessage = " did not pick rock, paper, scissors.";
+    let playerDidNotPickMessage = "Player" + genericDidNotPickMessage;
+    let computerDidNotPickMessage = "Computer" + genericDidNotPickMessage;
 
     switch(loweredPlayerInput) {
-        case "Rock".toLowerCase():
+        case ROCK:
             switch(loweredComputerInput) {
-                case "Paper".toLowerCase():
+                case ROCK:
+                    return genericDrawMessage + ROCK; 
+                case PAPER:
                     return loseMessage + rockPaperMessage;
-                default:
+                case SCISSORS:
                     return winMessage + scissorsRockMessage;
+                default:
+                    return computerDidNotPickMessage;
             }
 
-        case "Paper".toLowerCase():
+        case PAPER:
             switch(loweredComputerInput) {
-                case "Rock".toLowerCase():
+                case ROCK:
                     return winMessage + rockPaperMessage;
-                default:
+                case PAPER:
+                    return genericDrawMessage + PAPER;
+                case SCISSORS:
                     return loseMessage + paperScissorsMessage;
+                default:
+                    return computerDidNotPickMessage;
+            }
+
+        case SCISSORS:
+            switch(loweredComputerInput) {
+                case ROCK:
+                    return winMessage + paperScissorsMessage;
+                case SCISSORS:
+                    return loseMessage + scissorsRockMessage;
+                case PAPER:
+                    return genericDrawMessage + SCISSORS;
+                default:
+                    return computerDidNotPickMessage;    
             }
 
         default:
-            switch(loweredComputerInput) {
-                case "Rock".toLowerCase():
-                    return loseMessage + scissorsRockMessage;
-                default:
-                    return winMessage + paperScissorsMessage;
-            }
+            return playerDidNotPickMessage;
     }
 }
