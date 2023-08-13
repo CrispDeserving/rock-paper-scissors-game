@@ -60,9 +60,9 @@ function gameResults(playerSelection, computerSelection) {
             switch(loweredComputerInput) {
                 case ROCK:
                     return winMessage + paperScissorsMessage;
-                case SCISSORS:
-                    return loseMessage + scissorsRockMessage;
                 case PAPER:
+                    return loseMessage + scissorsRockMessage;
+                case SCISSORS:
                     return genericDrawMessage(SCISSORS);
                 default:
                     return computerDidNotPickMessage;    
