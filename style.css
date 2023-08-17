@@ -15,11 +15,11 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
     width: 80vh;
     height: 80vh;
+    padding: 2rem;
     background-color: rgb(255, 252, 233);
 }
 
@@ -40,12 +40,13 @@ body {
     width: 5rem;
 }
 
-
 .scoreboard {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
+    width: 70vh;
+    margin: auto 0;
 }
 
 .dash {
@@ -74,4 +75,14 @@ body {
 .choice {
     text-align: center;
     height: 1rem;
+}
+
+.menu {
+    border: 1px solid black;
+    height: 10vh;
+}
+
+.text {
+    border: 1px solid black;
+    height: 10vh;
 }
