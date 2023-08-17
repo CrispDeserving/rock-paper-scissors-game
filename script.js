@@ -2,6 +2,18 @@ const ROCK = "Rock".toLowerCase();
 const PAPER = "Paper".toLowerCase();
 const SCISSORS = "Scissors".toLowerCase();
 
+window.addEventListener("DOMContentLoaded", () => {
+    const choices = document.querySelectorAll(".choice");
+
+    choices.forEach((choice) => {
+        choice.addEventListener("click", handlePlayerChoice);
+    });
+});
+
+function handlePlayerChoice(event) {
+    console.log(event.target.id);
+}
+
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
 
