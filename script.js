@@ -11,10 +11,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function handlePlayerChoice(event) {
     const playerChoice = event.target.id;
-    const result_box = document.querySelector(".result");
+    const computerChoice = getComputerChoice();
     
-    let result = gameResults(playerChoice, getComputerChoice());
+    let result = gameResults(playerChoice, computerChoice);
     updateScore(result);
+    updateChoices(playerChoice, computerChoice);
 }
 
 function removeEvents() {

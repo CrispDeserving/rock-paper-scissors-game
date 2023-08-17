@@ -97,3 +97,11 @@ function updateScore(resultText) {
         resultElement.textContent = resultText;
     }
 }
+
+function updateChoices(playerChoice, computerChoice) {
+    const player = document.querySelector("#player > .choice");
+    const computer = document.querySelector("#computer > .choice");
+
+    player.textContent = playerChoice;
+    computer.textContent = computerChoice;
+}
