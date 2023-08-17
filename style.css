@@ -55,6 +55,7 @@ body {
 .info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
 }
 
@@ -78,6 +79,10 @@ body {
 .choice {
     text-align: center;
     height: 1rem;
+    width: 15vh;
+    background-color: silver;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -106,6 +111,7 @@ body {
 .result {
     width: 70vh;
     height: 7vh;
+    padding: 0.5rem;
     border: 2px solid gray;
     border-radius: 0.75rem;
 }
