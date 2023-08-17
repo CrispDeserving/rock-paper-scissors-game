@@ -79,4 +79,12 @@ function updateScore(resultText) {
     } else if (resultText.indexOf("lose") != -1 || resultText.indexOf("loss") != -1) {
         computerScore += 1;
     }
+
+    const winnerElement = document.querySelector(".winner-text");
+
+    if (playerScore >= 5) {
+        winnerElement.textContent = "Player wins!";    
+    } else if (computerScore >= 5) {
+        winnerElement.textContent = "Computer wins!";    
+    }
 }

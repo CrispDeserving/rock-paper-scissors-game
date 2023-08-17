@@ -14,8 +14,7 @@ function handlePlayerChoice(event) {
     const result_box = document.querySelector(".result");
     
     let result = gameResults(playerChoice, getComputerChoice());
-
-    result_box.textContent = result;
     updateScore(result);
-    console.log(`Score: ${playerScore} - ${computerScore}`);
+    
+    result_box.textContent = result;
 }
