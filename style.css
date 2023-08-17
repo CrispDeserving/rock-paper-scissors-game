@@ -5,8 +5,11 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -14,11 +17,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 1rem;
+    width: 60vw;
+    height: 60vh;
+    background-color: rgb(255, 252, 233);
+}
+
+.title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .choice-wrapper {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
