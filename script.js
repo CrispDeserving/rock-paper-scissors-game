@@ -2,7 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
-    const choices = document.querySelectorAll(".choice");
+    const choices = document.querySelectorAll(".player-choice");
 
     choices.forEach((choice) => {
         choice.addEventListener("click", handlePlayerChoice);
@@ -20,7 +20,7 @@ function handlePlayerChoice(event) {
 }
 
 function removeEvents() {
-    const choices = document.querySelectorAll(".choice");
+    const choices = document.querySelectorAll(".player-choice");
     
     choices.forEach((choice) => {
         choice.removeEventListener("click", handlePlayerChoice);
