@@ -21,6 +21,8 @@ body {
     height: 80vh;
     padding: 2rem;
     background-color: rgb(255, 252, 233);
+    border: 5px solid gray;
+    border-radius: 0.5rem;
 }
 
 .title {
@@ -47,6 +49,7 @@ body {
 .dash {
     width: 2rem;
     height: 0.5rem;
+    background-color: black;
 }
 
 .info {
