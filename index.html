@@ -6,13 +6,18 @@
   <title>Rock Paper Scissors Game!</title>
   <script src="./core-logic.js"></script>
   <script src="./script.js" defer></script>
+  <link href="./style.css" rel="stylesheet"/>
 </head>
 <body>
-  <button class="choice" id="rock">Rock</button>
-  <button class="choice" id="paper">Paper</button>
-  <button class="choice" id="scissors">Scissors</button>
+  <div class="choice-wrapper">
+    <button class="choice" id="rock">Rock</button>
+    <button class="choice" id="paper">Paper</button>
+    <button class="choice" id="scissors">Scissors</button>
+  </div>
 
-  <p class="result"></p>
-  <p class="winner-text"></p>
+  <div class="text">
+    <p class="result"></p>
+    <p class="winner-text"></p>
+  </div>
 </body>
 </html>
