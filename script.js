@@ -11,7 +11,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function handlePlayerChoice(event) {
-    console.log(event.target.id);
+    const playerChoice = event.target.id;
+    const result_box = document.querySelector(".result");
+
+    result_box.textContent = gameResults(playerChoice, getComputerChoice());
 }
 
 function getComputerChoice() {
