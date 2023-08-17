@@ -74,20 +74,26 @@ function gameResults(playerSelection, computerSelection) {
 }
 
 function updateScore(resultText) {
+    const playerScoreBoard = document.querySelector("#player > .score");
+    const computerScoreBoard = document.querySelector("#computer > .score");
+
     if (resultText.indexOf("win") != -1) {
         playerScore += 1;
+        playerScoreBoard.textContent = `${playerScore}`;
     } else if (resultText.indexOf("lose") != -1 || resultText.indexOf("loss") != -1) {
         computerScore += 1;
+        computerScoreBoard.textContent = `${computerScore}`;
     }
-    
-    const resultElement = document.querySelector(".result");
-    resultElement.textContent = resultText;
 
+    const resultElement = document.querySelector(".result");
+    
     if (playerScore >= 5) {
         resultElement.textContent = "Player wins!";
         removeEvents();
     } else if (computerScore >= 5) {
         resultElement.textContent = "Computer wins!";    
         removeEvents();
+    } else {
+        resultElement.textContent = resultText;
     }
 }
