@@ -98,24 +98,3 @@ function gameResults(playerSelection, computerSelection) {
             return playerDidNotPickMessage;
     }
 }
-
-function game() {
-    const GAMES = 5;
-    let playerScore = 0;
-    let computerScore = 0;
-
-    console.log("A game of rock, paper, scissors has started.");
-    console.log("The user will play against a computer.");
-
-    for (let i=0; i<GAMES; i++) {
-        let playerInput = prompt("Rock, papers, scissors, shoot!");
-    }
-
-    if (playerScore > computerScore) {
-        console.log("Player wins the game!");
-    } else if (playerScore < computerScore) {
-        console.log("Computer wins the game!");
-    } else {
-        console.log("The player and the computer is in a tie!");
-    }
-}
