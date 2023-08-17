@@ -19,7 +19,7 @@ body {
     align-items: center;
     gap: 1rem;
     width: 60vw;
-    height: 60vh;
+    height: 60vw;
     background-color: rgb(255, 252, 233);
 }
 
@@ -38,4 +38,40 @@ body {
 .player-choice {
     height: 2rem;
     width: 5rem;
+}
+
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dash {
+    width: 2rem;
+    height: 0.5rem;
+    background-color: black;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.player-name {
+    text-align: center;
+}
+
+.score {
+    width: 15vw;
+    height: 15vw;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+}
+
+.choice {
+    text-align: center;
+    height: 1rem;
 }
