@@ -83,8 +83,10 @@ function updateScore(resultText) {
     const winnerElement = document.querySelector(".winner-text");
 
     if (playerScore >= 5) {
-        winnerElement.textContent = "Player wins!";    
+        winnerElement.textContent = "Player wins!";
+        removeEvents();
     } else if (computerScore >= 5) {
         winnerElement.textContent = "Computer wins!";    
+        removeEvents();
     }
 }

@@ -15,6 +15,14 @@ function handlePlayerChoice(event) {
     
     let result = gameResults(playerChoice, getComputerChoice());
     updateScore(result);
-    
+
     result_box.textContent = result;
+}
+
+function removeEvents() {
+    const choices = document.querySelectorAll(".choice");
+    
+    choices.forEach((choice) => {
+        choice.removeEventListener("click", handlePlayerChoice);
+    });
 }
