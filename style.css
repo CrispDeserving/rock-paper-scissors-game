@@ -77,7 +77,8 @@ body {
     height: 10vh;
 }
 
-.action {
+.action,
+.status {
     font-family: sans-serif;
     font-size: 1.2rem;
 }
@@ -93,5 +94,12 @@ body {
 .text {
     border: 1px solid black;
     height: 10vh;
+    width: 70vh;
 }
 
+.result {
+    width: 70vh;
+    height: 7vh;
+    border: 2px solid gray;
+    border-radius: 0.75rem;
+}
