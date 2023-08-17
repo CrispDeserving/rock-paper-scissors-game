@@ -15,8 +15,6 @@ function handlePlayerChoice(event) {
     
     let result = gameResults(playerChoice, getComputerChoice());
     updateScore(result);
-
-    result_box.textContent = result;
 }
 
 function removeEvents() {
