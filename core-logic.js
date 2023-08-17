@@ -76,7 +76,7 @@ function gameResults(playerSelection, computerSelection) {
 function updateScore(resultText) {
     if (resultText.indexOf("win") != -1) {
         playerScore += 1;
-    } else if (resultText.indexOf("lose") != -1 || result.indexOf("loss") != -1) {
+    } else if (resultText.indexOf("lose") != -1 || resultText.indexOf("loss") != -1) {
         computerScore += 1;
     }
 }
