@@ -72,3 +72,11 @@ function gameResults(playerSelection, computerSelection) {
             return playerDidNotPickMessage;
     }
 }
+
+function updateScore(resultText){
+    if (result.indexOf("win") != -1) {
+        playerScore += 1;
+    } else if (result.indexOf("lose") != -1 || result.indexOf("loss") != -1) {
+        computerScore += 1;
+    }
+}

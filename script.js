@@ -16,10 +16,5 @@ function handlePlayerChoice(event) {
     let result = gameResults(playerInput, getComputerChoice());
 
     result_box.textContent = gameResults(playerChoice, getComputerChoice());
-
-    if (result.indexOf("win") != -1) {
-        playerScore += 1;
-    } else if (result.indexOf("lose") != -1 || result.indexOf("loss") != -1) {
-        computerScore += 1;
-    }
+    updateScore(result);
 }
